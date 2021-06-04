@@ -1,0 +1,109 @@
+.c-lang-switcher {
+
+    &.col-auto {
+        padding-right: 0px;
+        padding-left: 15px;
+
+        @media screen and (min-width: 330px) {
+            padding-right: 0;
+        }
+    
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+        }
+    }
+
+    &__current {
+        height: 100%;
+        background: transparent;
+        padding: 7px 30px 7px 7px;
+        transition: all ease 300ms;
+
+        .flag {
+            display: block;
+            width: 15px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border: 5px solid transparent;
+            border-top-color: $white;
+            transition: all ease 300ms;
+        }
+    }
+
+    &__dropdown {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 105%;
+        right: 0;
+        background: $white;
+        // min-width: 150px;
+        transition: all ease 300ms;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__lang {
+        display: flex;
+        align-items: center;
+        margin: 15px;
+
+        img {
+            margin-right: 7px;
+            margin-top: 1px;
+        }
+
+        span {
+            letter-spacing: 1.3px;
+            padding-right: 15px;
+            color: $body-text;
+        }
+    }
+}
+
+.is-fixed {
+    .c-lang-switcher {
+        &__current:after {
+            border-top-color: $white;
+        }
+
+        &__dropdown {
+            background: $dark-grey-2;
+            top: 48px;
+            
+            @include media-breakpoint-up(md) {
+                top: 58px;
+            }
+        }
+
+        &__lang {
+
+            span {
+                color: rgba($white, .85);
+            }
+        }
+    }
+}
+
+.nav-active {
+    .c-lang-switcher {
+        &__current {
+            background: transparent;
+            
+            &:after {
+                border-top-color: $white;    
+            }
+        }
+    }
+}

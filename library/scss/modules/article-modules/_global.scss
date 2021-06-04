@@ -1,0 +1,44 @@
+.module--article.module-1 {
+    margin-top: 50px;
+    
+    @include media-breakpoint-up(lg) {
+        margin-top: 100px;
+    }
+}
+
+.module--article {
+    margin-bottom: 40px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 65px;
+    }
+
+    + .module:not(.module--article) {
+        padding-top: 35px;
+    }
+        
+    p {
+        color: $dark-grey;
+        margin-bottom: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+        color: $dark-grey;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+
+    &.article-text + .article-text {
+        @include media-breakpoint-up(lg) {
+            margin-top: -20px;
+        }
+    }
+}

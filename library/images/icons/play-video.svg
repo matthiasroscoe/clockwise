@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="101px" viewBox="0 0 102 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Play video icon@2x</title>
+    <g id="LOCATION-PROFILE-PAGE-(Edinburgh)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1-Location-profile-page-(Edinburgh)" transform="translate(-351.000000, -4562.000000)">
+            <g id="Group-8" transform="translate(79.000000, 4562.000000)">
+                <g id="Play-video-icon" transform="translate(272.000000, 0.000000)">
+                    <g id="Group">
+                        <ellipse id="Oval" fill="#FFFFFF" opacity="0.409923735" cx="50.7743363" cy="50.2765487" rx="50.7743363" ry="50.2765487"></ellipse>
+                        <ellipse id="Oval" fill="#FFFFFF" cx="51.180531" cy="50.6787611" rx="36.5575221" ry="36.199115"></ellipse>
+                        <path d="M46.9936006,57.7487611 L57.3046934,50.9558429 C57.5035786,50.8207234 57.6350629,50.61957 57.6702211,50.3966341 C57.7053794,50.1736982 57.6413317,49.9472416 57.4921678,49.7670823 L57.3046934,49.5972593 L46.9936006,42.8043411 C46.7095603,42.6113686 46.3295385,42.5803283 46.0119718,42.7241616 C45.6944052,42.8679949 45.4938053,43.162012 45.4938053,43.4836329 L45.4938053,57.0694693 C45.4938053,57.5384224 45.9134811,57.9185841 46.4311774,57.9185841 L46.9936006,57.7487611 Z" id="Path" fill="#3B3E48" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

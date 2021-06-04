@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="630px" height="492px" viewBox="0 0 630 492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Clockwise icon footer</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="630" height="492"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Footer" transform="translate(-810.000000, -408.000000)">
+            <g id="Clockwise-icon-footer" transform="translate(810.000000, 408.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g id="Clockwise-Monogram-BLACK-1" mask="url(#mask-2)" fill="#383A45">
+                    <g transform="translate(74.000000, 28.000000)">
+                        <path d="M312.683975,626 C140.269096,626 0,485.586432 0,312.998896 C0,140.409151 140.269096,0 312.683975,0 C417.023745,0 514.107494,51.8197661 572.382894,138.620359 L543.312481,158.175613 C491.554043,81.085291 405.337779,35.0603284 312.683975,35.0603284 C159.581716,35.0603284 35.0248057,159.743566 35.0248057,312.998896 C35.0248057,466.254225 159.581716,590.939672 312.683975,590.939672 C406.383493,590.939672 493.138057,544.10644 544.748684,465.66017 L574,484.946 C515.887855,573.268171 418.201828,626 312.683975,626" id="Fill-1"></path>
+                        <polyline id="Fill-4" points="347.090302 364.947136 347.090302 278.470747 312.086121 278.470747 261.004181 278.543604 261.004181 148 226 148 226 313.132835 226.002205 313.132835 226.002205 313.59426 312.086121 313.59426 312.086121 400 477 400 477 364.947136 347.090302 364.947136"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

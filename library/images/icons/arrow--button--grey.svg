@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Carousel arrow mobile</title>
+    <g id="MEMBERSHIP-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5.1-Membership-page-mobile" transform="translate(-262.000000, -939.000000)">
+            <g id="Carousel-arrow-mobile" transform="translate(263.000000, 940.000000)">
+                <g>
+                    <circle id="Oval" stroke="#A9A577" stroke-width="0.68" cx="18.7548387" cy="18.7548387" r="18.7548387"></circle>
+                    <polygon id="Path" fill="#3B3E48" fill-rule="nonzero" transform="translate(18.754839, 19.248387) scale(-1, 1) translate(-18.754839, -19.248387) " points="15.4645161 12.8322581 17.4417806 14.760091 14.236129 17.8851735 28.6258065 17.8851735 28.6258065 20.6116006 14.236129 20.6116006 17.4417806 23.7366832 15.4645161 25.6645161 8.88387097 19.2483871"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

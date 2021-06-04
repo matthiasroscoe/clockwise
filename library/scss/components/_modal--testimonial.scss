@@ -1,0 +1,25 @@
+.c-testimonials-modal {
+    position: fixed;
+    z-index: $z-modal;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: $beige;
+    opacity: 0;
+    visibility: hidden;
+
+    .video-close {
+        position: absolute;
+        z-index: 2;
+        top: 18px;
+        right: 15px;
+        display: block;        
+    
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

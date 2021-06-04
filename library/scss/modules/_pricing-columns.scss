@@ -1,0 +1,162 @@
+.pricing-cols {
+	margin-top: 55px;
+	margin-bottom: 55px;
+	background: linear-gradient(
+		to bottom,
+		rgba($beige-2, 0) 125px,
+		rgba($beige-2, 1) 125px
+	);
+
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 70px 0;
+		background: none;
+	}
+
+	&__heading {
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__col {
+		margin-bottom: 63px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 116px;
+		}
+
+		.image-wrap {
+			@include aspect-ratio(371, 199);
+		}
+
+		.details {
+			padding: 29px 0px 68px;
+			@include media-breakpoint-up(md) {
+				padding: 29px 45px 50px;
+				background: $beige-2;
+			}
+		}
+
+		.slick-arrows {
+			position: relative;
+			z-index: 2;
+			.arrow {
+				width: 38px;
+				height: 38px;
+				cursor: pointer;
+
+				&--prev {
+					margin-left: 0;
+					transform: scale(-1);
+				}
+			}
+		}
+
+		.title {
+			text-align: center;
+			color: $dark-grey;
+			font-size: 20px;
+			line-height: 24px;
+			padding: 0 50px;
+			margin-top: -31px;
+			margin-bottom: 0px;
+
+			@include media-breakpoint-up(md) {
+				text-align: left;
+				font-size: 30px;
+				line-height: 33px;
+				padding: 0;
+				margin-top: 0;
+			}
+		}
+
+		.text {
+			font-size: 16px;
+			color: $body-text;
+			line-height: 25px;
+			letter-spacing: 1.33px;
+
+			ul {
+				margin-top: 0;
+				&:first-of-type {
+					margin-top: 1em;
+				}
+			}
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+
+		.pricing {
+			padding-top: 25px;
+			margin-top: 6px;
+			border-top: 1px solid rgba(59, 61, 72, 0.27);
+
+			@include media-breakpoint-up(lg) {
+				margin-top: 22px;
+			}
+
+			.price-text {
+				color: $dark-grey-2;
+				font-size: 15px;
+				letter-spacing: 0.58px;
+				flex: 0 0 120px;
+
+				.price {
+					margin-left: 5px;
+					font-size: 30px;
+					letter-spacing: 0.7px;
+				}
+			}
+
+			.price-details {
+				color: $dark-grey-2;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 1.4px;
+				margin-top: 5px;
+				margin: 12px 0 0 7px;
+			}
+		}
+
+		.c-btn {
+			position: absolute;
+			bottom: -9px;
+			align-self: center;
+			@include media-breakpoint-up(md) {
+				bottom: -29px;
+			}
+		}
+	}
+
+	.slick-dots {
+		@include media-breakpoint-up(lg) {
+			bottom: 20px;
+		}
+	}
+
+	.slick-arrow-desk {
+		position: absolute;
+		right: -20px;
+		top: 186px;
+
+		@include media-breakpoint-up(lg) {
+			top: 183px;
+		}
+		@include media-breakpoint-up(xl) {
+			top: 214px;
+		}
+		@include media-breakpoint-up(xxl) {
+			top: 267px;
+		}
+
+		&--prev {
+			right: auto;
+			left: -20px;
+			transform: scale(-1);
+		}
+	}
+}

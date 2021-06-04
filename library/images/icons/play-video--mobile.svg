@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Play icon mobile</title>
+    <g id="HOMEPAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.7-Clockwise-homepage-mobile" transform="translate(-238.000000, -297.000000)">
+            <g id="Group-12" transform="translate(29.000000, 287.000000)">
+                <g id="Group-14">
+                    <g id="Group-11">
+                        <g id="Group-4" transform="translate(20.000000, 9.000000)">
+                            <g id="Group" transform="translate(190.000000, 2.000000)">
+                                <g id="Play-icon-mobile">
+                                    <g>
+                                        <circle id="Oval" stroke="#FFFFFF" stroke-width="0.8" opacity="0.541224888" cx="15.2" cy="15.2" r="15.2"></circle>
+                                        <path d="M12.8615382,18.9111111 L18.7846133,15.3555567 C18.8988603,15.2848323 18.9743898,15.1795445 18.994586,15.0628552 C19.0147822,14.9461659 18.9779908,14.8276339 18.8923055,14.7333347 L18.7846133,14.6444458 L12.8615382,11.0888914 C12.6983749,10.9878856 12.4800762,10.9716385 12.2976541,11.0469238 C12.115232,11.1222091 12,11.2761038 12,11.4444469 L12,18.5555557 C12,18.8010155 12.2410774,19 12.5384614,19 L12.8615382,18.9111111 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

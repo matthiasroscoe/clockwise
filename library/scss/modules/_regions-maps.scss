@@ -1,0 +1,185 @@
+.regions {
+    background: $dark-grey;
+    padding: 20px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 0;
+    }
+
+    &__maps {
+        margin-bottom: 20px;
+
+        .unselected {
+            left: 15px;
+            width: calc(100% - 30px);
+
+            svg {
+                path {
+                    opacity: .05;
+                    fill: $white;
+                    transition: opacity ease 300ms;
+                    
+                    &:hover {
+                        opacity: .2;
+                    }
+                }
+            }
+        }
+
+        .selected {
+            left: 15px;
+            width: calc(100% - 30px);
+
+            .map.is-active {
+                opacity: 1;
+            }
+
+            svg {
+                path {
+                    fill: $green;
+                }
+            }
+        }
+
+        .logo-icon {
+            position: absolute;
+            width: 26px;
+            height: 28px;
+            background-image: url('#{$images}/icons/logo-icon--cream.png');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transform: translate(50%, 50%);
+            transition: opacity ease 400ms 400ms;
+
+            &.is-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    
+    &__text {
+        padding-top: 40px;
+        margin-bottom: 20px;
+        min-height: 530px;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 580px;
+            margin-bottom: 20px;
+            padding-bottom: 80px;
+        }
+
+        .clockwise-in {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 22px;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 10px;
+            }
+        }
+        .selectric {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 5px;
+            }
+        }
+        .c-inline-link {
+            margin-top: 30px;
+            @include media-breakpoint-up(lg) {
+                margin-top: 0;
+                position: absolute;
+                bottom: 40px;
+            }
+        }
+    }
+
+    &__locations {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0px;
+        transition: all ease 500ms;
+        max-width: 350px;
+        
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            max-height: 1000px;
+            // transition: all ease 500ms;
+            // padding-bottom: 40px;
+        }
+
+        .location {
+            position: relative;
+            padding: 19px 40px 18px 0;
+            border-bottom: 1px solid rgba($white, .25);
+            font-size: 20px;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 22px;
+                line-height: 24px;
+                letter-spacing: .4px;
+                opacity: .75;
+                transition: opacity $smooth 500ms;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            span {
+                text-align: center;
+                font-size: 10px;
+                line-height: 1;
+                letter-spacing: .5px;
+                background: $dark-grey-2;
+                border-radius: 15px;
+                padding: 7px 15px;
+                margin-left: 12px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 13px;
+                background-image: url('#{$images}/icons/arrow--white.svg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
+
+    &__nav {
+        background: $dark-grey-2;
+        padding: 13px 0;
+
+        a {
+            margin: 0 12px;
+            padding: 6px 18px;
+            border-radius: 15px;
+            color: $white;
+            background: $dark-grey-2;
+            border: 1px solid $dark-grey-2;
+            transition: all ease 450ms;
+
+            &.is-active {
+                background: $white;
+                color: $dark-grey-2;
+            }
+
+            &:hover {
+                border-color: $white;
+            }
+        }
+    }
+}

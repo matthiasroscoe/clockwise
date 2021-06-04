@@ -1,0 +1,47 @@
+.mr-grid {
+
+    @include media-breakpoint-up(lg) {
+        .c-filter__dropdown {
+            max-width: 340px;
+        }
+    }
+
+    &__region-filter {
+        opacity: 1;
+        transition: opacity ease 400ms;
+
+        &.is-faded {
+            opacity: 0;
+        }
+        
+        .locations__filter.meeting-room {
+            margin-bottom: 15px;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+
+    .js-mr-posts {
+        opacity: 1;
+        transition: opacity ease 400ms;
+
+        &.is-faded {
+            opacity: 0;
+        }
+    }
+
+    &__location {
+        margin-bottom: 40px;
+
+        &__heading {
+            margin-bottom: 5px;
+
+            h3 {
+                font-size: 22px;
+                line-height: 25px;
+            }
+        }
+    }
+}

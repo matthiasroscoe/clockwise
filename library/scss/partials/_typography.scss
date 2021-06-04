@@ -1,0 +1,170 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+
+
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.eot');
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.woff2') format('woff2'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.woff') format('woff'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.ttf') format('truetype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim-Light.svg#GTWalsheim-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.eot');
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.eot?#iefix') format('embedded-opentype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.woff2') format('woff2'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.woff') format('woff'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.ttf') format('truetype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheimMedium.svg#GTWalsheimMedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheim.eot');
+  src: url('../../../library/fonts/gt-walsheim/GTWalsheim.eot?#iefix') format('embedded-opentype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim.woff2') format('woff2'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim.woff') format('woff'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim.ttf') format('truetype'),
+      url('../../../library/fonts/gt-walsheim/GTWalsheim.svg#GTWalsheim') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+
+
+// Font stacks
+$sans-serif: 'GT Walsheim', 'Helvetica', Arial, sans-serif;
+
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+  max-width: 100%;
+}
+
+a {
+  color: $dark-grey;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: $dark-grey;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 28px;
+  color: $dark-grey;
+  
+  @include media-breakpoint-up(lg) {
+    font-size: 43px;
+    line-height: 45px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: $body-text;
+  margin-top: 0;
+  
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+
+
+/**
+ * Typographical utility classes
+ */
+
+// Text alignment
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+@include media-breakpoint-up(lg) {
+    .text-lg-right { text-align: right; }
+    .text-lg-left { text-align: left; }
+    .text-lg-center { text-align: center; }
+}
+
+// Text styles
+.text-upper { text-transform: uppercase; }
+.text-underline { text-decoration: underline; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+
+// Text colour 
+.text-white { color: $white; }
+@include media-breakpoint-up(lg) {
+  .text-lg-white { color: $white; }
+}

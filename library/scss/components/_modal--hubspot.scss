@@ -1,0 +1,72 @@
+.c-hs-modal {
+    position: fixed;
+    z-index: $z-modal;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    background: $beige;
+    opacity: 0;
+    visibility: hidden;
+    
+    &__header {
+        padding: 17px 30px 25px;
+
+        @include media-breakpoint-up(md) {
+            padding: 28px 30px 50px;
+        }
+
+        .logo {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            svg {
+                max-width: 149px;
+                @include media-breakpoint-up(md) {
+                    max-width: 206px;
+                }
+
+                g#Nav * {
+                    fill: $dark-grey;
+                    mask: none;
+                }
+            }
+        }
+
+        .close {
+            padding-left: 15px;
+            padding-right: 15px;
+            top: 1px;
+            
+            img {
+                width: 39px;
+                height: 39px;
+                
+                @include media-breakpoint-up(lg) {
+                    width: 47px;
+                    height: 47px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        padding-bottom: 60px;
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 160px;
+        }
+
+        h1 {
+            font-size: 41px;
+            line-height: 42px;
+            margin-bottom: 38px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 65px;
+                line-height: 70px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

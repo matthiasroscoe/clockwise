@@ -1,0 +1,86 @@
+.scroll-to-top {
+    position: fixed;
+    will-change: transform;
+    z-index: $z-overlay;
+    bottom: 5px;
+    right: 35px;
+    opacity: 0;
+    visibility: hidden;
+    mix-blend-mode: difference;
+    color: $mix-blend;
+    transform: rotate(90deg);
+    transform-origin: right top;
+    transition: all ease-in-out 500ms;
+
+    &.is-active {
+        opacity: .55;
+        visibility: visible;
+    }
+    
+    .arrow {
+        transform: rotate(180deg);
+        width: 29px;
+        height: 5px;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            height: 1px;
+            width: 0;
+            background: $mix-blend;
+            transition: width ease-in-out 300ms;
+            transition-delay: 150ms;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 25px;
+            height: 3px;
+            width: 0;
+            border: 3.5px solid transparent;
+            border-left: 0px solid $mix-blend;
+            transition: all ease-in-out 150ms;
+            transition-delay: 0ms;
+        }
+    }
+
+    .text {
+        color: inherit;
+        letter-spacing: 1px;
+    }
+
+    .line {
+        width: 48px;
+        height: 1px;
+        
+        &::after {
+            content: '';
+            @include absolute-fill;
+            background: $mix-blend;
+            transition: width ease-in-out 500ms;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+
+        .arrow:after {
+            width: 24px;
+            transition-delay: 0ms;
+        }
+        .arrow:before {
+            width: 2px;
+            border-left-width: 3px;
+            transition-delay: 300ms;
+        }
+
+        .line:after {
+            width: 0;
+        }
+    }
+
+}

@@ -1,0 +1,72 @@
+.article-quote {
+    
+    &__quote {
+        padding: 35px 26px 42px;
+        margin-right: 30px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 30px 35px 22px;
+            margin-right: 0;
+        }
+
+        .speechmarks {
+            position: absolute;
+            left: 26px;
+            top: -11px;
+
+            @include media-breakpoint-up(lg) {
+                left: 35px;
+            }
+        }
+
+        .quote {
+            font-size: 18px;
+            line-height: 28px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 28px;
+                margin-right: 20px;
+            }
+        }
+
+        .details {
+            margin-top: 25px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid $dark-grey;
+            
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                padding-left: 72px;
+                margin: 0;
+                right: -168px;
+                bottom: 35px;
+                border-bottom: none;
+            }
+
+            &:after {
+                display: none;
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 162px;
+                    height: 1px;
+                    background: $dark-grey;
+                }
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 14px;
+                letter-spacing: .5px;
+                margin-bottom: 4px;
+                
+                @include media-breakpoint-up(lg) {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

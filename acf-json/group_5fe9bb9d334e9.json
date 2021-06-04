@@ -1,0 +1,91 @@
+{
+    "key": "group_5fe9bb9d334e9",
+    "title": "Community",
+    "fields": [
+        {
+            "key": "field_6012f5021e7cc",
+            "label": "Hero display mode",
+            "name": "display_mode",
+            "type": "select",
+            "instructions": "Change which articles appear in the hero section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "recent": "Automatically display the most recent articles\/events",
+                "custom": "Handpick the articles\/events"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "copy_once",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fe9bbbf25433",
+            "label": "Articles",
+            "name": "articles",
+            "type": "relationship",
+            "instructions": "Choose the articles and drag and drop to change the order. Choose 4 to enable the slider.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6012f5021e7cc",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "article",
+                "event"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": "",
+            "return_format": "id",
+            "translations": "copy_once"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/community.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1611856867
+}

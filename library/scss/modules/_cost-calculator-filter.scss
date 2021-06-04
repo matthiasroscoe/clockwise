@@ -1,0 +1,80 @@
+.calculator {  
+    position: relative;
+    z-index: 2;
+    
+    &__headings {
+        padding-top: 30px;
+
+        h2 {
+            font-size: 30px;
+            line-height: 34px;
+            letter-spacing: .5px;
+            margin-bottom: 5px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 30px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    &__filter {
+        background: $dark-grey;
+        padding-bottom: 33px;
+
+        .c-filter {
+            @include media-breakpoint-down(md) {
+                padding: 0 30px 13px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-left: 0;
+            }
+
+            &__options {
+                padding-top: 20px;
+
+                @include media-breakpoint-between(lg, xl) {
+                    .c-filter__dropdown {
+                        max-width: 200px;
+                        margin-right: 20px;
+                    }
+                    .c-filter__dropdown--region {
+                        min-width: 200px;
+                    }
+                    .c-filter__dropdown--num-people {
+                        max-width: 115px;
+                    }
+                    .c-filter__dropdown--time-period {
+                        max-width: 130px;
+                    }
+                }
+            }
+    
+            .c-btn {
+                margin-top: 18px;
+                height: 58px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 49px;
+                }
+            }
+        }
+
+
+        .max-people {
+            opacity: .85;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 1.1;
+            position: absolute;
+            top: 5px;
+            right: 0;
+
+            @include media-breakpoint-up(lg) {
+                bottom: 0px;
+                right: auto;
+                top: auto;
+            }
+        }    
+    }
+}

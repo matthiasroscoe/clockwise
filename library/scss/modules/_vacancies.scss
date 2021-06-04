@@ -1,0 +1,19 @@
+.vacancies {
+    margin-top: 42px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 75px;
+    }
+
+    .c-filter__dropdown {
+        max-width: none;
+    }
+
+    .js-vacancies-grid {
+        opacity: 1;
+        transition: opacity ease 400ms;
+        &.is-faded {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Event icon final</title>
+    <g id="COMMUNITY-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7.1-Community-page" transform="translate(-876.000000, -912.000000)">
+            <g id="Event-icon-final" transform="translate(877.000000, 913.000000)">
+                <g id="Group-2">
+                    <g>
+                        <circle id="Oval" stroke="#3B3D48" opacity="0.515508743" cx="19" cy="19" r="19"></circle>
+                        <g id="Event-icon" transform="translate(9.702128, 8.893617)">
+                            <g id="Group-2">
+                                <g id="Event-icon">
+                                    <g id="Group-2">
+                                        <rect id="Rectangle" stroke="#3B3D48" stroke-width="0.8" x="0" y="2.1656535" width="19.4042553" height="18.0471125" rx="3.2"></rect>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="5.21040189" cy="8.12120061" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="9.52245863" cy="8.12120061" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="13.8345154" cy="8.12120061" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="5.21040189" cy="11.7306231" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="9.52245863" cy="11.7306231" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="13.8345154" cy="11.7306231" rx="1" ry="1"></ellipse>
+                                        <ellipse id="Oval" fill="#3B3D48" cx="5.21040189" cy="15.3400456" rx="1" ry="1"></ellipse>
+                                        <rect id="Rectangle" fill="#3B3D48" x="3.59338061" y="0" width="1.43735225" height="4.33130699" rx="0.718676123"></rect>
+                                        <rect id="Rectangle" fill="#3B3D48" x="14.3735225" y="0" width="1.43735225" height="4.33130699" rx="0.718676123"></rect>
+                                    </g>
+                                </g>
+                                <ellipse id="Oval" fill="#3B3D48" cx="9.52245863" cy="15.3400456" rx="1" ry="1"></ellipse>
+                                <ellipse id="Oval" fill="#3B3D48" cx="13.8345154" cy="15.3400456" rx="1" ry="1"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

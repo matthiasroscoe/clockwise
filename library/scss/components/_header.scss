@@ -1,0 +1,288 @@
+#site-header {
+    position: fixed;
+    will-change: transform;
+    z-index: $z-header;
+    width: 100%;
+    max-width: 100vw;
+    transition: all ease-in-out 300ms;
+    opacity: 1;
+    visibility: visible;
+
+    @include media-breakpoint-up(md) {
+        height: 100px;
+    }
+
+    // Corrects logo SVG colours
+    g#Nav * {
+        fill: $white;
+        mask: none;
+    }
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.is-fixed {
+        background-color: $dark-grey;
+        height: 55px;
+        
+        @include media-breakpoint-up(md) {
+            height: 70px;
+        }
+    }
+}
+
+.header-inner {
+    position: absolute;
+    transition: all ease 500ms;
+    padding: 18px 30px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 30px 15px 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .is-fixed & {
+        padding-top: 9px;
+        padding-bottom: 8px;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 11px;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+.header-logo {
+    @include media-breakpoint-down(sm) {
+        padding: 0 15px 0 0 !important;
+    }
+
+    svg {
+        width: 125px;
+        transition: width ease 400ms;
+
+        @media screen and (min-width: 317px) {
+            width: 149px;
+        }
+        @include media-breakpoint-up(md) {
+            width: 206px;
+        }
+    }
+
+    .is-fixed:not(.nav-active) & {
+        svg {
+            width: 135px;
+            @include media-breakpoint-up(md) {
+                width: 185px;
+            }
+        }
+    }
+}
+
+.header-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms ease-in-out;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 16px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    &__link {
+        font-size: 11px;
+        color: $white;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+            transition: all $smooth 500ms;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            left: 0;
+            bottom: 8px;
+            background: $white;
+            transition: width $smooth 500ms;
+        }
+
+        &:hover {
+            @include media-breakpoint-up(lg) {
+                opacity: .8;
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--login {
+            svg {
+                display: none;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-right: 24px;
+                position: relative;
+
+                svg {
+                    display: block;
+                    position: absolute;
+                    width: 19px;
+                    height: 19px;
+                    right: 0px;
+                    top: 12px;
+                }
+            }
+        }
+    }
+
+    .is-fixed:not(.nav-active) & {
+        @include media-breakpoint-down(md) {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &__link {
+            @include media-breakpoint-up(lg) {
+                font-size: 14px;
+                letter-spacing: 1.3px;
+            }
+        }
+    }
+}
+
+.header-hamburger {
+    @include media-breakpoint-down(sm) {
+        padding: 0 0 0 15px !important;
+    }
+
+    .hamburger {
+        border: 1px solid rgba($white, .6);
+        border-radius: 50%;
+        transition: all $smooth 400ms;
+        width: 47px;
+        height: 47px;
+
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+            height: 40px;
+            
+            .is-fixed & {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        span {
+            position: relative;
+            display: block;
+            height: 1px;
+            background: $white;
+            transition: all $smooth 800ms;
+            
+            &.l1 {
+                width: 25px;
+                transform: translate(9px, 14px);
+
+                @include media-breakpoint-down(sm) {
+                    transform: translate(8px, 12px);
+                    width: 21px;
+                    
+                    .is-fixed & {
+                        width: 17px;
+                        transform: translate(8px, 11px)
+                    }
+                }
+            }
+            &.l2 {
+                transform: translate(9px, 21px);
+                width: 18px;
+                
+                @include media-breakpoint-down(sm) {
+                    width: 15px;
+                    transition: all ease 400ms;
+                    transform: translate(8px, 18px);
+    
+                    .is-fixed & {
+                        width: 13px;
+                        transform: translate(8px, 16px)
+                    }
+                }
+            }
+            &.l3 {
+                transform: translate(9px, 28px);
+                width: 25px;
+
+                @include media-breakpoint-down(sm) {
+                    width: 21px;
+                    transform: translate(8px, 24px);
+    
+                    .is-fixed & {
+                        width: 17px;
+                        transform: translate(8px, 21px)
+                    }
+                }
+            }
+        }
+    
+        &:hover {
+            @include media-breakpoint-up(md) {
+                border-color: rgba($white, .85);
+    
+                .l2 { 
+                    width: 25px; 
+                }
+            }
+        }
+    
+        &.is-active {
+            border-color: $green;
+    
+            span.l1 {
+                width: 23px;
+                transform: translate(11px, 22px) rotate(-45deg);
+
+                @include media-breakpoint-down(sm) {
+                    width: 20px;
+                    transform: translate(9px, 19px) rotate(-45deg);
+                    
+                    .is-fixed & {
+                        width: 17px;
+                        transform: translate(8px, 17px) rotate(-45deg);
+                    }
+                }   
+            }
+            span.l2 {
+                width: 0;
+                &.is-fixed {
+                    width: 0;
+                }
+            }
+            span.l3 {
+                width: 23px;
+                transform: translate(11px, 20px) rotate(45deg);
+                @include media-breakpoint-down(sm) {
+                    width: 20px;
+                    transform: translate(9px, 17px) rotate(45deg);
+                    
+                    .is-fixed & {
+                        width: 17px;
+                        transform: translate(8px, 15px) rotate(45deg);
+                    }
+                }
+            }
+        }
+
+    }
+}

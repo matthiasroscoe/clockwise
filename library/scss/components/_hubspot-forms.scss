@@ -1,0 +1,239 @@
+/**
+ * Styling the embedded Hubspot Forms
+ */
+
+.c-hbspt-form {
+    
+    .submitted-message {
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 500;
+            color: $dark-grey;
+            text-align: center;
+        }
+    }
+
+    form {
+        /** General form resets **/
+        * {
+            font-family: $sans-serif;
+        }
+
+        fieldset {
+            width: 100%;
+            max-width: none;
+
+            .hs-form-field {
+                width: 100%;
+                margin-bottom: 30px;
+
+                .input {
+                    margin-right: 0 !important;
+                }
+            }
+            
+            &.form-columns-2 {
+
+                .hs-form-field {
+                    width: 100%;
+                    
+                    @include media-breakpoint-up(lg) {
+                        width: 50%;
+        
+                        &:nth-of-type(odd) {
+                            padding-right: 25px;
+                        }
+                        &:nth-of-type(even) {
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /** Form elements **/
+
+        // Labels 
+        .hs-form-field label span {
+            font-size: 14px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1.1px;
+            color: $dark-grey;
+            margin-bottom: 16px;
+        }
+
+        // Basic text inputs
+        .hs-input[type=text],
+        .hs-input[type=email],
+        .hs-input[type=number],
+        .hs-input[type=tel],
+        textarea {
+            height: 55px;
+            width: 100% !important;
+            background: $white;
+            border-radius: 0px;
+            border: .75px solid #b7ada2;
+            font-size: 18px;
+            line-height: 34px;
+            padding: 10px 16px;
+            margin-top: 16px;
+
+            &::placeholder {
+                color: rgba($dark-grey, .62);
+            }
+        }
+
+        // Select fields
+        select.hs-input {
+            appearance: none;
+            width: 100% !important;
+            height: 55px;
+            padding: 11px 35px 11px 16px;
+            margin-top: 16px;
+            font-size: 18px;
+            border-radius: 0px;
+            background: $white;
+            background-image: url('#{$images}/icons/select-dropdown.svg');
+            background-position: calc(100% - 16px) center;
+            background-repeat: no-repeat;
+            border: .75px solid #b7ada2;
+
+            &::-ms-expand {
+                display: none;
+            }
+            
+            option {
+                color: $dark-grey;
+            }
+            
+            &.is-placeholder {
+                color: rgba($dark-grey, .62);
+            }
+        }
+
+
+        // Textarea 
+        textarea {
+            height: 111px;
+            resize: none;
+        }
+        
+        // Checkbox
+        .hs-fieldtype-booleancheckbox {
+            ul {
+                margin-top: 0;
+                padding-left: 0;
+                
+                @include media-breakpoint-up(lg) {
+                    margin-top: 16px;
+                }
+
+                li {
+                    list-style: none;
+                }
+
+                li::marker {
+                    content: '';
+                }
+
+                label {
+                    display: flex;
+                    justify-content: center;
+
+                    span {
+                        margin-left: 24px;
+                        margin-bottom: 0;
+
+                        p {
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 23px;
+                            letter-spacing: 1px;
+                            text-transform: none;
+                            color: $dark-grey;
+                        }
+                    }
+
+                    .hs-form-required {
+                        display: none;
+                    }
+
+                    input[type=checkbox] {
+                        position: relative;
+                        appearance: none;
+                        border-radius: 0px;
+                        min-width: 22px;
+                        width: 22px;
+                        height: 22px;
+                        margin: 0;
+                        outline: none;
+        
+                        &:after {
+                            content: '';
+                            @include absolute-fill;
+                            border: 1px solid rgba($dark-grey, .7);
+                            background: $white;
+                        }
+        
+                        &:checked {
+                            &:after {
+                                background: $dark-grey;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        
+        // Submit button
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+            
+            @include media-breakpoint-up(lg) {
+                margin-top: 31px;
+            }
+            
+            input[type=submit] {
+                appearance: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                // padding: 12px 26px;
+                padding: 20px 23px;
+                border: 1px solid $green;
+                border-radius: 0px;
+                background: $green;
+                color: $white;
+                margin-left: auto;
+                margin-right: auto;
+                
+                font-size: 16px;
+                letter-spacing: 1.3px;
+                line-height: 1;
+                text-transform: uppercase;
+            }
+        }
+        
+
+
+        // Error styles
+        .hs-error-msgs {
+            display: none !important;
+        }
+        .hs-input.error {
+            border-color: #cc0000 !important;
+        }
+
+
+        // Recaptcha badge
+        .grecaptcha-badge {
+            display: none;
+        }
+    }
+
+}

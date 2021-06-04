@@ -1,0 +1,70 @@
+{
+    "key": "group_5fecb58e150d5",
+    "title": "Post Type: Vacancy",
+    "fields": [
+        {
+            "key": "field_5ff88219610f2",
+            "label": "External Link",
+            "name": "external_link",
+            "type": "url",
+            "instructions": "If you want to link this vacancy to an external website, include the link here. If you want to create a page for the vacancy on the website, leave this blank.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_5fecb5c4b83b4",
+            "label": "Job Location",
+            "name": "location",
+            "type": "relationship",
+            "instructions": "If the vacancy applies is at a particular location only, select the location below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "location"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "id",
+            "translations": "copy_once"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "job_vacancy"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1610123103
+}

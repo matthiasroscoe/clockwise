@@ -1,0 +1,52 @@
+body.browser-is-ie {
+
+    // Cursor remove
+    .c-cursor {
+        display: none !important;
+    }
+
+    // Remove arrows after cta block headings
+    .cta-blocks__content h2:after {
+        display: none !important;
+    }
+
+
+    // Footer fixes
+    #site-footer .footer-main {
+        @include media-breakpoint-up(lg) {
+            flex: 1 0 77%;
+        }
+    }
+
+    #site-footer {
+
+        .footer__col {
+            @include media-breakpoint-up(lg) {
+                .subheading {
+                    flex: 1 1 0%;
+                }
+
+                > a {
+                    flex: 1 1 0%;
+                    min-height: 10px;
+                }
+
+                &--locations {
+                    > a {
+                        flex: 1 1 0%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .scroll-to-top.is-active {
+        color: $dark-grey;
+        opacity: 1;
+
+        .arrow:after, .arrow:before {
+            background: $dark-grey;
+        }
+    }
+}

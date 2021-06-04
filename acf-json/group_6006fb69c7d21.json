@@ -1,0 +1,368 @@
+{
+    "key": "group_6006fb69c7d21",
+    "title": "Events",
+    "fields": [
+        {
+            "key": "field_600ff816c4266",
+            "label": "Eventbrite",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_600ff8c7e4f72",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If enabled, the page will connect with Eventbrite and build the page based on the content added in Eventbrite.\r\n\r\nThe modules section below will be replaced with the 'Description' of the Eventbrite event. The description will be replaced by the 'Summary' field of the event.\r\n\r\nYou will still need to assign the event to a category and add a thumbnail image in the 'imagery' tab.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6006fb7bbd940",
+            "label": "Add event from Eventbrite?",
+            "name": "is_eventbrite",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_6006fb9bbd941",
+            "label": "Eventbrite ID",
+            "name": "eventbrite_id",
+            "type": "text",
+            "instructions": "Use your event's URL to find the event ID. It will look something like https:\/\/www.eventbrite.com\/myevent?eid=123456789. The number after eid= is the Event ID. \r\nIn this example, the Event ID is 123456789",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb7bbd940",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
+        },
+        {
+            "key": "field_601012c6832b6",
+            "label": "Eventbrite URL",
+            "name": "eventbrite_url",
+            "type": "url",
+            "instructions": "This field will be updated automatically when the page is updated.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb7bbd940",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_6006fb69d274c",
+            "label": "General Information",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_600ff861c4268",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If the event is generated from Eventbrite, the description will be replaced with the 'Summary' of the Eventbrite event.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6006fb69d2788",
+            "label": "Short description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0,
+            "translations": "translate"
+        },
+        {
+            "key": "field_6006fb69d27c4",
+            "label": "Imagery",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6006fb69d27ff",
+            "label": "Thumbnail Image",
+            "name": "thumbnail",
+            "type": "image",
+            "instructions": "Min. size: 500 x 500",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_6006fb69d2839",
+            "label": "Landscape Image",
+            "name": "landscape",
+            "type": "image",
+            "instructions": "If no landscape image is added, the thumbnail will be used instead.\r\n\r\nMin. size: 1500 x 750",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb7bbd940",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_60100bf8bb714",
+            "label": "Eventbrite image URL",
+            "name": "eventbrite_image",
+            "type": "url",
+            "instructions": "This field will be updated automatically when the page is updated.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb7bbd940",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_6006fb69d2874",
+            "label": "Related Articles",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6006fb69d28b0",
+            "label": "Include related articles section?",
+            "name": "show_rel_articles",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb69d2788",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_6006fb69d28ec",
+            "label": "Related Articles",
+            "name": "related_articles",
+            "type": "relationship",
+            "instructions": "You can optionally select which articles to display below. \r\n\r\nIf left blank, the latest two articles from this type of post will be shown. (e.g. the latest two Articles\/Events\/Team Members)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6006fb69d28b0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "event",
+                "article",
+                "career_case_study",
+                "job_vacancy"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 2,
+            "return_format": "id",
+            "translations": "copy_once"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1611822321
+}

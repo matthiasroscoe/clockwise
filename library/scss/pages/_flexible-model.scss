@@ -1,0 +1,13 @@
+.en-id-1056 {
+    .hero {
+        .hero__content {
+            @include media-breakpoint-up(lg) {
+                max-width: 650px;
+
+                &__text {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

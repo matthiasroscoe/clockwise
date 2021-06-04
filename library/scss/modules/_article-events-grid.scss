@@ -1,0 +1,105 @@
+.ae-grid {
+    padding: 52px 0 67px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 109px 0 120px;
+    }
+
+    .filter-wrap {
+        height: 55px;
+        border-bottom: 2px solid $dark-grey;
+        margin-bottom: 50px;
+
+        @include media-breakpoint-up(lg) {
+            height: 75px;
+            margin-bottom: 75px;
+        }
+
+        .filter {
+            flex: 1 0 0;
+            background: $beige;
+            transition: all ease-in-out 500ms;
+
+            &:hover {
+                background: $beige-2;
+            }
+
+            p {
+                line-height: 1.1;
+                transition: all ease-in-out 500ms;
+
+                @include media-breakpoint-up(lg) {
+                    padding-left: 40px;
+                
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 39px;
+                        height: 39px;
+                        background-image: url('#{$images}/icons/article--white.svg');
+                        background-image: url('#{$images}/icons/article--dark.svg');
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        transition: background-image ease-in-out 500ms;
+                    }
+                    
+                    &.event::before {
+                        background-image: url('#{$images}/icons/event--white.svg');
+                        background-image: url('#{$images}/icons/event--dark.svg');
+                    }
+                }
+
+            }
+
+            &.is-active {
+                background: $dark-grey;
+
+                p {
+                    color: $white;
+
+                    &:before {
+                        background-image: url('#{$images}/icons/article--white.svg');
+                    }
+
+                    &.event:before {
+                        background-image: url('#{$images}/icons/event--white.svg');
+                    }
+                }
+            }
+        }
+    }
+
+    .posts-wrap {
+        min-height: 100vh;
+        
+        .posts {
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0px;
+            transition: all ease-in-out 500ms;
+            
+            &.is-active {
+                opacity: 1;
+                visibility: visible;
+                max-height: 10000px;
+            }
+
+            .events-filter {
+                margin-top: -40px;
+                padding-bottom: 60px;
+            }
+
+            .js-posts {
+                opacity: 1;
+                transition: opacity 400ms ease;
+                &.is-faded {
+                    opacity: 0;
+                }
+            }
+        }
+        
+    }
+}

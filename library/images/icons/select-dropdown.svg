@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Dropdown icon</title>
+    <g id="HOMEPAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.1-Clockwise-homepage" transform="translate(-408.000000, -466.000000)" fill="#3B3E48" fill-rule="nonzero">
+            <g id="LANDING-SECTION">
+                <g id="Dropdown" transform="translate(126.000000, 442.000000)">
+                    <g id="Dropdown-icon" transform="translate(282.000000, 24.000000)">
+                        <path d="M3.10769196,10.8666667 L10.7230742,5.53333508 C10.8699633,5.42724852 10.9670726,5.26931669 10.9930391,5.09428279 C11.0190057,4.9192489 10.9717025,4.7414508 10.8615357,4.60000205 L10.7230742,4.46666876 L3.10769196,-0.866662868 C2.89791058,-1.01817164 2.61724087,-1.04254228 2.38269816,-0.929614308 C2.14815544,-0.816686335 2,-0.58584433 2,-0.333329705 L2,10.3333335 C2,10.7015233 2.30995661,11 2.69230747,11 L3.10769196,10.8666667 Z" id="Path" transform="translate(6.500000, 5.000000) rotate(90.000000) translate(-6.500000, -5.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Map zoom out icon</title>
+    <g id="LOCATION-PROFILE-PAGE-(Edinburgh)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1-Location-profile-page-(Edinburgh)" transform="translate(-657.000000, -8026.000000)">
+            <g id="Map-zoom-out-icon" transform="translate(651.000000, 8020.000000)">
+                <g>
+                    <g id="Group-3" transform="translate(23.500000, 23.500000) rotate(-45.000000) translate(-23.500000, -23.500000) translate(7.000000, 7.000000)" opacity="0.550432478" stroke="#FFFFFF" stroke-width="0.7">
+                        <circle id="Oval" cx="16.45" cy="16.45" r="16.45"></circle>
+                    </g>
+                    <g id="close-(1)" transform="translate(23.500000, 23.500000) rotate(-45.000000) translate(-23.500000, -23.500000) translate(17.500000, 17.500000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M0.845857201,0.151277376 C0.648979086,-0.0388647181 0.335251778,-0.0334055376 0.145110495,0.163473418 C-0.0403846959,0.355532033 -0.0403846959,0.659997497 0.145110495,0.852056112 L11.0479185,11.7549107 C11.2447966,11.9450528 11.5585239,11.9395936 11.7486652,11.7427146 C11.9341313,11.550656 11.9341313,11.2461905 11.7486652,11.054161 L0.845857201,0.151277376 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,177 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// Sass variables
+@import "partials/variables";
+
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+	// styles in print.scss
+	@import "partials/print";
+}
+
+
+
+/**
+ * Bootstrap
+ */
+
+ // Custom grid for bootstrap to inherit
+ $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+@import "node_modules/bootstrap/scss/mixins/breakpoints";
+@import "node_modules/bootstrap/scss/mixins/grid-framework";
+@import "node_modules/bootstrap/scss/mixins/grid";
+
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities/display";
+@import "node_modules/bootstrap/scss/utilities/flex";
+@import "node_modules/bootstrap/scss/utilities/spacing";
+//  @import "node_modules/bootstrap/scss/bootstrap-reboot";
+
+/**
+ * Utilities
+ */
+ @import "partials/mixins";
+ @import "partials/utilities";
+ @import "partials/typography";
+ @import "partials/spacing";
+ @import "partials/animation";
+
+/**
+ * Components
+ */
+@import "components/header";
+@import "components/footer";
+@import "components/nav";
+@import "components/language-switcher";
+@import "components/topbar";
+@import "components/cookie-banner";
+@import "components/buttons";
+@import "components/cursors";
+@import "components/hubspot-forms";
+@import "components/modal--small";
+@import "components/modal--calculator";
+@import "components/modal--hubspot";
+@import "components/modal--testimonial";
+@import "components/modal--meeting-room";
+@import "components/filters";
+@import "components/accordion";
+@import "components/card--location";
+@import "components/card--article-event";
+@import "components/card--vacancy";
+@import "components/card--meeting-room";
+@import "components/scroll-to-top";
+@import "components/page-transition";
+@import "components/wysiwyg";
+
+/**
+ * Modules
+ */
+@import "modules/hero";
+@import "modules/hero-slider";
+@import "modules/content-img";
+@import "modules/content-img--style-4";
+@import "modules/content-icons";
+@import "modules/introduction";
+@import "modules/show-locations";
+@import "modules/location-index";
+@import "modules/article-events-grid";
+@import "modules/post-tiles";
+@import "modules/cta-blocks";
+@import "modules/cta-banner";
+@import "modules/pricing-columns";
+@import "modules/testimonials-video-slider";
+@import "modules/hover-banner--mobile";
+@import "modules/hover-banner--desktop";
+@import "modules/quote-bubbles";
+@import "modules/meeting-rooms-slider--mobile";
+@import "modules/meeting-rooms-slider--desktop";
+@import "modules/meeting-rooms-grid";
+@import "modules/amenities";
+@import "modules/regions-maps";
+@import "modules/desk-size-slider";
+@import "modules/compare-plans";
+@import "modules/benefits";
+@import "modules/image-slider";
+@import "modules/virtual-tour";
+@import "modules/team-slider";
+@import "modules/neighbourhood";
+@import "modules/vacancies";
+@import "modules/map-contact";
+@import "modules/hubspot-form";
+@import "modules/cost-calculator-graph";
+@import "modules/cost-calculator-filter";
+
+@import "modules/article-modules/global";
+@import "modules/article-modules/text";
+@import "modules/article-modules/image";
+@import "modules/article-modules/text-image";
+@import "modules/article-modules/quote";
+@import "modules/article-modules/share-article";
+@import "modules/article-modules/related-articles";
+
+/***
+	Pages
+***/
+
+@import "pages/global";
+@import "pages/article";
+@import "pages/single-location";
+@import "pages/single-referral";
+@import "pages/single-membership-plan";
+@import "pages/team";
+@import "pages/flexible-model";
+@import "pages/iefix";
+
+// Vendor
+@import "vendor/slick-theme";
+@import "vendor/slick";
+@import "vendor/selectric";
+@import "vendor/nouislider";
+@import "vendor/lity";

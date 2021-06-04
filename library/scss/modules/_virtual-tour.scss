@@ -1,0 +1,103 @@
+.virtual-tour {
+    background: linear-gradient(to top, $beige-2 83%, rgba($beige-2, 0) 83%);
+    margin-bottom: 45px;
+    padding-bottom: 70px;
+    
+    @include media-breakpoint-up(lg) {
+        background: linear-gradient(to left, $beige-2 59%, rgba($beige-2, 0) 59%);
+        padding-top: 55px;
+        padding-bottom: 55px;
+        margin-bottom: 120px;
+    }
+
+    &__mp {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            padding-right: 6%;
+            margin-bottom: 0;
+        }
+
+        &-inner {
+            background: #615F66;
+            height: 100%;
+            
+            @include media-breakpoint-down(md) {
+                @include aspect-ratio(1,1);
+                max-height: 420px;
+            }
+        }
+
+        &-img {
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+
+            &.has-matterport {
+                opacity: .6;
+            }
+            
+            @include media-breakpoint-down(md) {
+                @include absolute-fill;
+            }
+            @include media-breakpoint-up(xxl) {
+                min-height: 405px;
+            }
+        }
+
+        .play-tour {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            .icon {
+                border-radius: 50%;
+                background-color: transparent;
+                transition: background-color ease-out 600ms;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                .icon {
+                    background-color: rgba($white, .2);
+                }
+            }
+        }
+    }
+
+
+    &__subheading {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 17px;
+        letter-spacing: 1px;
+
+        @include media-breakpoint-up(lg) {
+            margin: 10px 0 20px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 15px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 40px;
+        }
+    }
+}

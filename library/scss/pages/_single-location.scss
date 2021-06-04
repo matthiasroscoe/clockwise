@@ -1,0 +1,8 @@
+.location-template-default {
+
+    .module.quotes {
+        @include media-breakpoint-up(lg) {
+            // margin-top: 25px;
+        }
+    }
+}

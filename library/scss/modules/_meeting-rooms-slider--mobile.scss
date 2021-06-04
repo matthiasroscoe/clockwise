@@ -1,0 +1,116 @@
+/**
+ * Slick slider on mobile/tablet screens
+ */ 
+
+.rooms-slider:not(.js-meeting-rooms-slider--custom) {
+    margin-top: 60px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 0;
+    }
+
+    &__slider {
+        opacity: 0;
+        transition: all ease 450ms;
+        &.is-active {
+            opacity: 1;
+        }
+    }
+
+    .rooms-slider__wrap {
+        width: 100%;
+        @include media-breakpoint-down(xxl) {
+            padding: 0 15px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1440px;
+        }
+        @include media-breakpoint-down(xl) {
+            max-width: 1140px;
+        }
+        @include media-breakpoint-down(lg) {
+            max-width: 960px
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 720px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding: 0 20px;
+            max-width: 540px;
+        }
+    }
+
+    // Slick slider
+    .rooms-slider__slider {
+        margin: 0 -15px 75px !important;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 125px !important;
+        }
+        
+        .room {
+            transform: initial !important;
+            height: auto !important;
+            padding: 0 15px;
+
+            .img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 35px;
+            }
+
+            .details {
+                opacity: 1 !important;
+                text-align: center;
+                @include media-breakpoint-up(sm) {
+                    padding: 0 15px;
+                }
+
+                .slick-arrows {
+                    position: relative;
+                    z-index: 2;
+                    .arrow {
+                        width: 38px;
+                        height: 38px;
+                        cursor: pointer;
+        
+                        &--prev {
+                            margin-left: 0;
+                            transform: scale(-1);
+                        }
+                    }
+                }
+
+                h2 {
+                    margin: -35px 0 12px;
+                    padding: 0 50px;
+
+                    @include media-breakpoint-up(sm) {
+                        margin-top: 0;
+                        padding: 0;
+                    }
+                }
+
+                .description {
+                    margin-bottom: 30px;
+                }
+
+                .buttons {
+                    text-align: center;
+                    .c-btn {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -40px;
+            left: 0;
+        }
+    }
+
+    .js-mr-arrow-next, .js-mr-arrow-prev {
+        display: none;
+    }
+
+}

@@ -1,0 +1,48 @@
+.mr-modal {
+    margin-top: 20px;
+    min-height: 400px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 60px;
+    }
+}
+
+.mr-modal__tabs {
+    border-bottom: 2px solid $dark-grey;
+    margin-bottom: 30px;
+    width: 100%;
+
+    .tab {
+        flex: 0 0 50%;
+        text-align: center;
+        height: 50px;
+        padding: 14px 15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: $dark-grey;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: .5px;
+        }
+
+        &.is-active {
+            background: $dark-grey;
+            color: $white;
+        }
+    }
+}
+
+.mr-modal__content {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+
+    &--member {
+        padding-top: 30px;
+    }
+}

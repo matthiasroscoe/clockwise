@@ -1,0 +1,132 @@
+.location-card {
+    margin-bottom: 50px;
+    
+    @include media-breakpoint-up(lg) {
+        opacity: 0;
+        animation: fadeIn ease 500ms 1 forwards;
+        margin-bottom: 70px;
+    }
+
+    &__inner {
+        height: 100%;
+        .region--one-location & {
+            height: auto;
+        }
+    }
+
+    .image-wrap {
+        @include aspect-ratio(389, 320);
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+            img {
+                transform: scale(1);
+                transition: transform ease 850ms;
+            }
+    
+            &:hover {
+                img {
+                    transform: scale(1.08);
+                }
+            }
+        }
+    }
+
+    .details {
+        background: $beige;
+        position: relative;
+        z-index: 2;
+        margin-top: -90px;
+        margin-right: 43px;
+        padding-right: 19px; 
+
+        @include media-breakpoint-up(xxl) {
+            margin-right: 70px;
+        }   
+    }
+
+    .name {
+        padding-top: 20px;
+        margin-bottom: 8px;
+
+        .title {
+            font-size: 19px;
+            line-height: 22px;
+            margin-top: 20px;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 22px;
+                line-height: 25px;
+            }
+        }
+
+        .coming-soon {
+            border-radius: 12px;
+            padding: 6px 10px 5px;
+            background: $dark-grey-2;
+            font-size: 9px;
+            letter-spacing: .5px;
+            line-height: 1.1;
+            text-align: center;
+            min-width: 91px;
+            margin-top: 2px;
+        }
+    }
+
+    .building-name {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 11px;
+    }
+
+    .address {
+        margin-bottom: 20px;
+
+        img {
+            margin-top: 1px;
+        }
+
+        p {
+            letter-spacing: .5px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .contact {
+        &__heading {
+            opacity: 1;
+            letter-spacing: .5px;
+            margin-top: 3px;
+
+            &--email {
+                margin-top: 20px;
+            }
+        }
+
+        p, a {
+            font-size: 16px;
+            line-height: 24px;
+            margin-right: 45px;
+        }
+
+        a {
+            text-decoration: underline;
+            margin-right: 0;
+        }
+    }
+
+    .c-btn {
+        margin-top: 14px;
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: 34px;
+        }
+    }
+
+}

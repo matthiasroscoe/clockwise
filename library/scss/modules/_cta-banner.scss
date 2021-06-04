@@ -1,0 +1,134 @@
+.cta-banner {
+
+    + .cta-banner {
+        margin-top: 25px;
+        @include media-breakpoint-up(md) {
+            margin-top: 120px;
+        }
+    }
+
+    &__img {
+        background: $dark-grey;
+        z-index: 0;
+
+        @include media-breakpoint-up(lg) {
+            width: calc(100% - 30px);
+            margin: 0 15px;
+        }
+    }
+
+    &__content {
+        z-index: 2;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    &--full-width {
+        padding: 75px 15px 62px;
+
+        .cta-banner__content {
+            p {
+                @include media-breakpoint-up(lg) {
+                    max-width: 700px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .cta-banner__img {
+            width: 100%;
+            margin: 0;
+        }
+
+    }
+
+    &--small {
+        margin: 0 auto;
+        width: 100%;
+        padding: 80px 15px 72px;
+        
+        &.has-margins {
+            @include media-breakpoint-down(md) {
+                margin: 0 30px;
+                width: calc(100% - 60px);
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 100px 15px 90px;
+        }
+
+    }
+
+    &--medium {
+        padding: 47px 15px 55px;
+
+        @include media-breakpoint-up(lg) {
+            // padding: 186px 15px 150px;
+            padding: 142px 15px 124px;
+        }
+
+        .cta-banner__content {
+            h1 {
+                @include media-breakpoint-down(md) {
+                    font-size: 30px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        .cta-banner__img {
+            &:after {
+                content: '';
+                @include absolute-fill;
+                z-index: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.38), rgba(0,0,0,0.0));
+            }
+        }
+    }
+    
+    // ACF Large size
+    &--large {
+        padding: 47px 15px 55px;
+
+        @include media-breakpoint-up(lg) {
+            // padding: 186px 15px 150px;
+            padding: 142px 15px 124px;
+        }
+
+        .cta-banner__content {
+            h1 {
+                @include media-breakpoint-down(md) {
+                    font-size: 30px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        .cta-banner__img {
+            &:after {
+                content: '';
+                @include absolute-fill;
+                z-index: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.38), rgba(0,0,0,0.0));
+            }
+        }
+    }
+
+
+
+    &.has-overlay {
+        .cta-banner__img {
+            &:after {
+                content: '';
+                @include absolute-fill;
+                z-index: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.2));
+            }
+        }
+    }
+
+}

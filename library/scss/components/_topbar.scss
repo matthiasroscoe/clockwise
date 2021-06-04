@@ -1,0 +1,57 @@
+.c-site-topbar {
+    background-color: $dark-grey;
+    max-height: 80px;
+    transition: max-height 1000ms ease-in-out;
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+        max-height: 31px;
+    }
+
+    &.is-hidden {
+        max-height: 0px;
+    }
+
+    &.is-removed {
+        max-height: 0px !important;
+    }
+
+    .no-topbar & {
+        max-height: 0px;
+    }
+
+    &__content {
+        padding: 6px 45px 5px;
+        @include media-breakpoint-up(lg) {
+            padding: 5px 45px 4px;
+        }
+
+        p, a  {
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 1px;
+            color: rgba($white, .85);
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            padding-left: 10px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        width: 24px;
+        height: 24px;
+        background-image: url('#{$images}/icons/close-modal--white.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}

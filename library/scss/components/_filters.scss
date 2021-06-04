@@ -1,0 +1,101 @@
+.c-filter {
+    background: $dark-grey;
+    padding: 35px 30px 38px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 0 0 0 40px;
+    }
+
+    &__options {
+        @include media-breakpoint-up(lg) {
+            flex: 1 0 0;
+            padding-top: 35px;
+            padding-bottom: 13px;
+        }
+    }
+
+    &__dropdown {
+        flex: 0 0 100%;
+
+        @include media-breakpoint-up(lg) {
+            flex: auto;
+            max-width: 231px;
+            margin-right: 35px;
+            justify-content: space-between;
+        }
+
+        label {
+            display: block;
+            color: $white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 9px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 13px;
+            }
+        }
+
+        .selectric-wrapper {
+            margin-bottom: 25px;
+
+            .selectric {
+                width: 100%;
+
+                .label {
+                    font-size: 16px;
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__submit {
+        background: $green;
+        color: $white;
+        height: 49px;
+        line-height: 49px;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+        @include media-breakpoint-up(lg) {
+            width: 150px;
+            height: 100%;
+        }
+        @include media-breakpoint-up(xxl) {
+            width: 170px;
+        }
+    }
+
+    &__reset {
+        padding: 12px 0;
+        margin-bottom: 30px;
+
+        a {
+            padding-left: 30px;
+            font-size: 12px;
+            line-height: 34px;
+            letter-spacing: 1px;
+            color: rgba($dark-grey, .48);
+            transition: all ease 300ms;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 3px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 15px;
+                background-image: url('#{$images}/icons/reset.svg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.introduction {
+    padding: 55px 0 80px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+        padding: 110px 0 120px;
+    }
+
+    .c-btn {
+        margin-top: 25px;
+        @include media-breakpoint-up(lg) {
+            margin-top: 43px;
+        }
+    }
+
+    .img {
+        position: absolute;
+        left: 0;
+        top: 120px;
+        width: 222px;
+        height: 235px;
+    }
+}

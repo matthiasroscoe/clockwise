@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Room icon placeholder</title>
+    <g id="MEETING-ROOMS-&amp;-EVENTS-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="15.3-Meeting-Rooms-and-Events-page-default-no-filtering" transform="translate(-80.000000, -2280.000000)">
+            <g id="Group-5" transform="translate(51.000000, 1961.000000)">
+                <g id="Group-10" transform="translate(0.000000, 31.000000)">
+                    <g id="Room-icon-placeholder" transform="translate(29.000000, 288.000000)">
+                        <g id="Group-9">
+                            <circle id="Oval" fill="#B7ADA2" cx="14.21" cy="14.21" r="14.21"></circle>
+                            <text id="ICON" font-family="GTWalsheimPro-Regular, GT Walsheim Pro" font-size="7.35" font-weight="normal" line-spacing="9.8" fill="#FFFFFF">
+                                <tspan x="5.10335" y="16.8">ICON</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

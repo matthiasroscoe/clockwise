@@ -1,0 +1,236 @@
+.c-button-wrap {
+    .c-btn {
+        margin-bottom: 12px;
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 45px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+    }
+}
+
+.c-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    border: 1px solid $green;
+    background: $green;
+    color: $white;
+    
+    span {
+        margin-top: 1px;
+        font-size: 16px;
+        letter-spacing: 1.3px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        padding-right: 12px;
+    }
+
+    .icon {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        min-width: 32px;
+        height: 32px;
+
+        svg {
+            @include absolute-fill;
+            border-radius: 50%;
+            transform: rotate(-90deg);
+
+            circle {
+                fill: transparent;
+                stroke: rgba($white, .54);
+                stroke-width: 2px;
+                
+                &.fg-circle {
+                    stroke: $white;
+                    opacity: 0;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 17px;
+            height: 11px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 11px 18px;
+
+        span {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &--small {
+        padding: 11px 14px;
+
+        span {
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &--dark {
+        background: $dark-grey;
+        border-color: $dark-grey;
+    }
+
+    &--beige {
+        background: $beige;
+        border-color: #B7ADA2;
+        color: $dark-grey;
+
+        .icon svg {
+            circle {
+                stroke: #B7ADA2;
+
+                &.fg-circle {
+                    stroke: $dark-grey;
+                }
+            }
+        }
+    }
+
+    &--white {
+        background: $white;
+        border-color: $white;
+        color: $dark-grey;
+
+        .icon svg {
+            circle {
+                stroke: rgba($dark-grey, .54);
+
+                &.fg-circle {
+                    stroke: $dark-grey;
+                }
+            }
+        }
+    }
+    
+    &--transparent {
+        background: transparent;
+        border-color: $white;
+    }
+
+    &--download {
+        .icon {
+            @include flex-center;
+            
+            img {
+                transform: rotate(90deg);
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+}
+
+
+
+.c-inline-link {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: .7;
+    transition: opacity ease 450ms;
+    padding-right: 30px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 16px;
+    }
+
+    &--arrow {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 1px;
+            width: 19px;
+            height: 13px;
+            background-image: url('#{$images}/icons/arrow--dark.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: all ease 450ms;
+        }
+
+        &:hover {
+            &::after {
+                right: -4px;
+            }
+        }
+    }
+
+    &--white {
+        color: $white;
+        opacity: .8;
+
+        &.c-inline-link--arrow::after {
+            background-image: url('#{$images}/icons/arrow--white.svg');
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+.c-pills {
+
+    &__heading {
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .c-pill {
+        opacity: .65;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        line-height: 25px;
+        font-weight: 300;
+        text-align: center;
+        color: $dark-grey;
+
+        padding: 6px 15px;
+        margin: 0 12px 12px;
+        border-radius: 16px;
+        border: 1px solid $dark-grey;
+        min-width: 135px;
+        background: transparent;
+        transition: all ease 400ms;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.is-active {
+            opacity: 1;
+            color: $white;
+            background: $dark-grey;
+        }
+    }
+}

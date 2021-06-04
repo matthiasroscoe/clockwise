@@ -1,0 +1,64 @@
+.image-slider {
+    margin-bottom: 154px;
+
+    .js-image-slider {
+
+        &:after {
+            content: '';
+            display: block;
+            @include absolute-fill;
+            z-index: 0;
+            width: calc(100% - 60px);
+            left: 30px;
+            opacity: .48;
+            background: linear-gradient(to top, rgba(black, 0.6) 0%, rgba(black, 0) 100%), linear-gradient(to right, rgba(black, .8) 0%, rgba(black, 0) 20%, rgba(black, 0) 80%, rgba(black, .8) 100%);
+            
+            @include media-breakpoint-up(lg) {
+                width: calc(100% - 30px);
+                left: 15px;
+            }
+        }
+    }
+
+    .img-wrap {
+        @include aspect-ratio(1280,630);
+    }
+
+    .slick-dots {
+        bottom: -45px;
+        left: 0px;
+        z-index: 1;
+
+        @include media-breakpoint-up(lg) {
+            bottom: 91px;
+            left: auto;
+
+            li button::before {
+                background-color: transparent;
+                border-color: $white;
+            }
+            li.slick-active button::before {
+                background-color: $white;
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+
+        @include media-breakpoint-up(xl) {
+            width: 45px;
+            height: 45px;
+        }
+
+        &--prev {
+            right: auto;
+            left: 50px;
+            transform-origin: top;
+            transform: rotate(180deg) translateY(-50%);
+        }
+    }
+}

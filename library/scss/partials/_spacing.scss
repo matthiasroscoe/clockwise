@@ -1,0 +1,114 @@
+/**
+ * Sets padding/margin rules for modules, depending upon which modules precede them
+ */ 
+
+// Modules following hero module
+.hero + .module:not(.introduction) {
+    margin-top: 50px;
+    
+    @include media-breakpoint-up(lg) {
+        margin-top: 75px;
+    }
+}
+
+.hero + .module.cont-img {
+    margin-top: 55px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 165px;
+    }
+}
+
+.hero + .module.team-slider {
+    padding-top: 47px;
+    margin-top: 0;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 110px;
+    }
+}
+
+.hero + .module.article-text {
+    margin-top: 50px;
+    
+    @include media-breakpoint-up(lg) {
+        margin-top: 100px;
+    }
+}
+
+.hero + .module.cont-icons {
+    margin-top: 50px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 91px;
+    }
+}
+
+.hero + .module.calculator {
+    margin-top: 0;
+}
+
+.hero + .module.amenities {
+    @include media-breakpoint-down(md) {
+        margin-top: 0;
+    }
+}
+
+// Modules following locations
+.locations + .pricing-cols {
+    padding-top: 0px;
+}
+
+// Modules following CTA Blocks
+.cta-blocks + .cta-banner {
+    padding-top: 120px;
+}
+.cta-blocks + .quotes {
+    margin-top: 65px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 132px;
+    }
+}
+
+// Modules following Image Hover Banner
+.banner-carousel-wrap + .hs-form-wrapper {
+    margin-top: 65px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 112px;
+    }
+}
+
+// Modules following Content/Image block
+.cont-img + .banner-carousel-wrap {
+    .hover-banner {
+        padding-top: 0;
+        // padding-bottom: 120px;
+    }
+}
+
+.cont-img + .quotes {
+    @include media-breakpoint-up(lg) {
+        padding-top: 100px;
+    }
+}
+
+// Modules following CTA Banner 
+.cta-banner + .cont-img {
+    @include media-breakpoint-down(md) {
+        margin-top: 75px;
+    }
+}
+
+.cta-banner + .mr-grid {
+    margin-top: 60px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 120px;
+    }
+}
+
+// Modules following Compare Plans
+.compare-plans + .banner-carousel-wrap {
+    .hover-banner {
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
+    }
+}

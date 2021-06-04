@@ -1,0 +1,114 @@
+/**
+ * Custom desktop slider
+ */ 
+.rooms-slider.js-meeting-rooms-slider--custom {
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    .rooms-slider__slider {
+        min-height: 610px;
+        opacity: 0;
+        transition: all ease 450ms;
+        &.is-active {
+            opacity: 1;
+        }
+
+        .room {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 390px;
+            width: 390px;
+
+            &::before {
+                content: '';
+                @include absolute-fill;
+                z-index: 2;
+                background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%);
+            }
+
+            &.is-only-slide {
+                height: 610px;
+                width: 610px;
+                z-index: 2;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .details {
+                    opacity: 1 !important;
+                }
+            }
+
+            .img {
+                @include absolute-fill;
+            }
+
+            .details {
+                text-align: left;
+                position: absolute;
+                z-index: 3;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                padding: 0 70px 65px;
+
+                h2 {
+                    color: $white;
+                }
+                
+                .description {
+                    color: $white;
+                    margin-bottom: 35px;
+                }
+
+                .buttons {
+                    .c-btn {
+                        margin-right: 12px;
+                    }
+                }
+            }
+    
+            &.js-current {
+                height: 610px;
+                width: 610px;
+                z-index: 2;
+    
+                .details {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &.js-mr-next, &.js-mr-prev {
+                z-index: 2;
+            }
+
+        }
+
+    }
+
+    .arrow {
+        @include media-breakpoint-up(lg) {
+            cursor: pointer;
+            position: absolute;
+            z-index: 3;
+            left: calc(100% / 2 + 375px);
+            top: calc(50% - 27px);
+            height: 53px;
+            width: 53px;
+            opacity: 1;
+            transition: all ease 450ms;
+    
+            &--prev {
+                left: calc(100% / 2 - 428px);
+                transform: scale(-1);
+            }
+    
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+}

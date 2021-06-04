@@ -1,0 +1,171 @@
+.testimonials-slider {
+    margin-bottom: 65px;
+    background: $beige;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 115px;
+    }
+
+    &__slider {
+        @include media-breakpoint-down(sm) {
+            padding: 0 !important;
+        }
+    }
+
+    &__slide {
+        &__inner {
+            min-height: 481px;
+            @include media-breakpoint-up(md) {
+                min-height: none;
+                height: 440px;
+            }
+            @include media-breakpoint-up(lg) {
+                height: 480px;
+            }
+            @include media-breakpoint-up(xl) {
+                height: 540px;
+            }
+            @include media-breakpoint-up(xxl) {
+                height: 630px;
+            }
+
+            &:before {
+                content: '';
+                @include absolute-fill;
+                z-index: 1;
+                background-color: rgba($dark-grey, .3);
+                transition: background-color $smooth 500ms;
+            }
+
+            .details {
+                z-index: 2;
+                padding: 65px 30px;
+                @include media-breakpoint-up(lg) {
+                    padding: 50px 50px 80px;
+                }
+
+                .heading {
+                    margin-bottom: 20px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 65px;
+                        line-height: 70px;
+                        margin-bottom: 30px;
+                    }
+                }
+    
+                .subheading {
+                    font-size: 13px;
+                    line-height: 13px;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 22px;
+                        line-height: 24px;
+                        letter-spacing: 1.5px;
+                        margin-bottom: 45px;
+                    }
+                }
+
+                .intro {
+                    max-width: 515px;
+                    margin-bottom: 30px;
+                }
+
+                .c-btn {
+                    @include media-breakpoint-down(sm) {
+                        padding: 9px 16px;
+
+                        span {
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+
+                // Amending spacing for intro slide
+                &--intro {
+                    .heading {
+                        margin-bottom: 22px;
+                        @include media-breakpoint-down(lg) {
+                            font-size: 41px;
+                            line-height: 42px;
+                        }
+                    }
+
+                    .subheading {
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .slick-dots {
+        left: 0;
+        bottom: 50px;
+
+        @include media-breakpoint-up(xxl) {
+            bottom: 90px;
+        }
+
+        li button::before {
+            background-color: transparent;
+            border-color: $white;
+        }
+        li.slick-active button::before {
+            background-color: $white;
+        }
+    }
+
+    &__logos {
+        margin: 55px -30px 0;
+        @include media-breakpoint-up(xl) {
+            margin: 90px 0 0;
+        }
+    
+        &__inner {
+            margin-bottom: 60px;
+            overflow: hidden;
+        }
+    
+        .our-clients {
+            margin-bottom: 25px;
+            margin-left: 30px;
+            font-size: 16px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            
+            @include media-breakpoint-up(xl) {
+                margin: 0;
+                padding-right: 20px;
+                letter-spacing: 1.5px;
+                font-size: 22px;
+                line-height: 24px;
+            }
+        }
+
+        .slick-list {
+            padding-right: 25%;
+        }
+    
+        .logo {
+            margin-left: 30px;
+
+            @include media-breakpoint-up(xl) {
+                margin: 0 22px;
+            }
+
+            img {
+                max-height: 30px;
+                max-width: 76px;
+                object-fit: contain;
+                
+                @include media-breakpoint-up(xl) {
+                    max-width: 96px;
+                }
+            }
+        }
+    }
+
+}

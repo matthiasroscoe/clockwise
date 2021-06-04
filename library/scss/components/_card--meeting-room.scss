@@ -1,0 +1,102 @@
+.mr-card {
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn ease 500ms 1 forwards;
+
+    @include media-breakpoint-up(lg) {
+        &:nth-of-type(3n-2) {
+            padding-right: 30px;
+        }
+        &:nth-of-type(3n-1) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &:nth-of-type(3n) {
+            padding-left: 30px;
+        }
+    }
+
+    .img {
+        width: 100%;
+        object-fit: cover;
+        height: 262px;
+
+        @include media-breakpoint-up(sm) {
+            height: 333px;
+        }
+    }
+
+    .details {
+        background: $beige;
+        position: relative;
+        z-index: 2;
+        margin-top: -90px;
+        margin-right: 43px;
+        padding-right: 19px; 
+
+        @include media-breakpoint-up(xxl) {
+            margin-right: 70px;
+        }   
+    }
+
+    .name {
+        padding-top: 20px;
+        margin-bottom: 15px;
+
+        .title {
+            min-width: 150px;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 5px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+
+        .floor-seats {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 1px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 20px;
+                padding-left: 12px;
+            }
+        }
+    }
+
+    .icons {
+        margin-bottom: 15px;
+
+        img {
+            width: 27px;
+            height: 27px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .price {
+        margin-right: 61px;
+        line-height: 1.15;
+        padding: 22px 0 0;
+        border-top: 1px solid rgba($dark-grey, .28);
+
+        .amount {
+            font-size: 30px;
+        }
+    }
+
+    .c-btn {
+        margin-top: 14px;
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.en-id-665 {
+    .module.team-slider {
+        @include media-breakpoint-down(md) {
+            background: $beige-2;
+            padding-bottom: 85px;
+            margin-bottom: 55px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.share-article {
+
+    &__inner {
+        padding-top: 35px;
+        padding-bottom: 75px;
+        border-top: 1px solid rgba($dark-grey, .31);
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 120px;
+        }
+
+        h3 {
+            letter-spacing: .5px;
+        }
+
+        .link {
+            margin: 0 12px;
+            filter: brightness(1);
+            transition: all ease 500ms;;
+
+            &:hover {
+                filter: brightness(.5);
+            }
+        }
+    }
+}

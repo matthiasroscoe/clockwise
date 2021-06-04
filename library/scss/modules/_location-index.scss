@@ -1,0 +1,61 @@
+.location-index {
+    margin-bottom: 85px;
+
+    &__heading {
+        h1 {
+            margin-bottom: 40px;
+    
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 60px;
+            }
+        }
+        
+        p {
+            letter-spacing: 1px;
+        }
+    }
+
+    &__filter {
+        margin-bottom: 50px;
+    }
+
+    &__posts {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: opacity ease 700ms;
+        background: $beige-2;
+        
+        @include media-breakpoint-up(lg) {
+            background: transparent;
+        }
+        
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            max-height: 10000px;
+            padding-top: 35px;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 0;
+                margin-bottom: 0px;
+            }
+        }
+        &.is-first {
+            @include media-breakpoint-up(lg) {
+                opacity: 1;
+                visibility: visible;
+                max-height: 10000px;
+            }
+        }
+
+        .location-card .details {
+            background: $beige-2;
+
+            @include media-breakpoint-up(lg) {
+                background: $beige;
+            }
+        }
+    }
+}

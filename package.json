@@ -1,0 +1,47 @@
+{
+  "name": "kingfisher",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "kf test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthiasroscoe/kingfisher.git"
+  },
+  "author": "Matthias Roscoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthiasroscoe/kingfisher/issues"
+  },
+  "homepage": "https://github.com/matthiasroscoe/kingfisher#readme",
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz",
+    "gulp-images-convert": "^1.1.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.6.0",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "node-sass": "^4.14.1",
+    "selectric": "^1.13.0"
+  }
+}

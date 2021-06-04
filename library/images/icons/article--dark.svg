@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Article icon navy</title>
+    <g id="COMMUNITY-PAGE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7.1-Community-page" transform="translate(-188.000000, -1441.000000)">
+            <g id="Article-icon-navy" transform="translate(189.000000, 1442.000000)">
+                <g>
+                    <circle id="Oval" stroke="#C8C8CB" stroke-width="0.85" cx="19.975" cy="19.975" r="19.975"></circle>
+                    <g id="Group-26" transform="translate(11.050000, 11.050000)" stroke="#3B3D48" stroke-linecap="square">
+                        <line x1="0.425" y1="0.425" x2="18.275" y2="0.425" id="Line-3"></line>
+                        <line x1="0.425" y1="6.375" x2="18.275" y2="6.375" id="Line-3"></line>
+                        <line x1="0.425" y1="12.325" x2="18.275" y2="12.325" id="Line-3"></line>
+                        <line x1="0.425" y1="18.275" x2="12.325" y2="18.275" id="Line-3"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

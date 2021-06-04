@@ -1,0 +1,63 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$black: #000000;
+$white: #ffffff;
+$green: #B2AC7F;
+$dark-green: #38595A;
+$beige: #FCF2E8;
+$beige-2: #ECE2D7;
+// $beige-2: #D1C4BC;
+$light-grey: #D8D8D8;
+$light-grey-2: #81868E;
+$dark-grey: #3B3D48;
+$dark-grey-2: #27272C;
+// $mix-blend: #fff8ef;
+$mix-blend: #e0d5c4;
+
+$body-text: rgba($dark-grey,0.85);
+$body-text-white: rgba($white,0.85);
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+/**
+ * Easings
+ */
+$smooth: cubic-bezier(.165,.84,.44,1);
+$easeOutQuad: cubic-bezier(.25,.46,.45,.94);
+
+/**
+ * Shortcuts
+ */
+$images: '/wp-content/themes/clockwise/library/images';
+
+
+/**
+ * Z-Indeces
+ */
+$z-overlay: 1000;
+$z-header: 1005;
+$z-modal: 1010;
+$z-cursor: 1020;
+$z-page-transition: 1025;

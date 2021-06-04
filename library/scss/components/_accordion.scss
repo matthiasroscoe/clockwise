@@ -1,0 +1,41 @@
+.c-accordion {
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba($dark-grey, .14);
+    transition: all ease 400ms;
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__toggle {
+        position: relative;
+        width: 22px;
+        height: 22px;
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 22px;
+            height: 1px;
+            background: $dark-grey;
+
+            &-2 {
+                width: 1px;
+                height: 22px;
+                transition: height ease 400ms;
+            }
+        }
+    }
+
+    &.is-active {
+        padding-bottom: 32px;
+
+        .c-accordion__toggle {
+            .line.line-2 {
+                height: 0;
+            }
+        }
+    }
+}

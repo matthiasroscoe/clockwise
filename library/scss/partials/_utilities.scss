@@ -1,0 +1,39 @@
+// Flexbox
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-md-center {
+    @include media-breakpoint-up(md) {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Cursor
+.u-pointer {
+    cursor: pointer;
+}
+
+// Backgrounds
+.u-bg-beige-2 { background: $beige-2 !important; }
+
+// Positioning
+.u-rel { position: relative; }
+.u-fix { position: fixed; }
+.u-fluid {
+    @include absolute-fill();
+}
+.u-lg-fluid {
+    @include media-breakpoint-up(lg) {
+        @include absolute-fill();
+    }
+}
+
+// Height/width
+.u-h100 { height: 100%; }
+.u-w100 { width: 100%; }
+@include media-breakpoint-up(lg) {
+    .u-lg-w100 { width: 100%; }
+    .u-lg-h100 { width: 100%; }
+}

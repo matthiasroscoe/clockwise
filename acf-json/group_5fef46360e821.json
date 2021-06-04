@@ -1,0 +1,58 @@
+{
+    "key": "group_5fef46360e821",
+    "title": "Options: Operate Settings",
+    "fields": [
+        {
+            "key": "field_5fef465d839ed",
+            "label": "Operate Login URL",
+            "name": "operate_login_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/workclockwise.member.site\/portal\/login.aspx",
+            "placeholder": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_5fef464f839ec",
+            "label": "Operate Bookings URL",
+            "name": "operate_bookings_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/workclockwise.member.site\/portal\/Meetings\/CalendarView.aspx",
+            "placeholder": "",
+            "translations": "copy_once"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-operate-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1609516710
+}

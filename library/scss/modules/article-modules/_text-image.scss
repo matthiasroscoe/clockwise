@@ -1,0 +1,29 @@
+.article-text-image {
+
+    .img-col {
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+    
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .text-col {
+        @include media-breakpoint-up(lg) {
+            padding-left: 73px;
+            max-width: 425px;
+        }
+
+        .c-btn {
+            margin-top: 20px;
+
+            &:nth-of-type(2) {
+                margin-top: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.c-wysiwyg {
+
+    h1, h2, h3 {
+        margin-top: 50px;
+    }
+
+    p a:not(.c-btn) {
+        text-decoration: underline;
+    }
+
+    ul, ol {
+        li {
+            color: $body-text;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 300;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    table {
+
+        thead {
+            &:nth-of-type(1) {
+                // background: 
+            }
+        }
+        td, th {
+            padding: 15px 10px;
+            border-top: 1px solid rgba($dark-grey, .2);
+            color: $body-text;
+            font-size: 14px;
+            line-height: 21px;
+            vertical-align: top;
+
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+}
